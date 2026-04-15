@@ -2255,6 +2255,2581 @@ export const seoKeywordThemes = [
 // EXPORT SUMMARY
 // ============================================================================
 
+
+// =============================================================================
+// EXTENDED FIRM DATA — v2 (added per multi-expert panel review)
+// =============================================================================
+
+export const historicalScores = {
+  "1": [
+    85.8,
+    86.6,
+    86.6,
+    86.4,
+    86.1,
+    86.9,
+    87.4,
+    87.9,
+    87.6,
+    87.3,
+    87.3,
+    94
+  ],
+  "2": [
+    89.9,
+    90.1,
+    89.8,
+    90.9,
+    91.4,
+    92.2,
+    92.1,
+    92.5,
+    93.5,
+    94.1,
+    94.0,
+    92
+  ],
+  "3": [
+    86.8,
+    87.2,
+    87.6,
+    87.7,
+    88.7,
+    88.9,
+    88.9,
+    89.3,
+    90.1,
+    90.0,
+    90.1,
+    91
+  ],
+  "4": [
+    80.9,
+    82.1,
+    83.2,
+    84.1,
+    84.0,
+    84.4,
+    84.3,
+    84.6,
+    84.2,
+    84.5,
+    85.6,
+    87
+  ],
+  "5": [
+    82.9,
+    83.8,
+    84.5,
+    85.1,
+    86.3,
+    86.9,
+    86.5,
+    87.4,
+    87.5,
+    88.2,
+    89.3,
+    88
+  ],
+  "6": [
+    84.0,
+    84.9,
+    85.2,
+    85.3,
+    86.2,
+    86.1,
+    85.8,
+    85.7,
+    85.8,
+    86.8,
+    87.9,
+    90
+  ],
+  "7": [
+    80.7,
+    81.2,
+    81.8,
+    81.9,
+    82.8,
+    83.6,
+    84.3,
+    84.3,
+    84.2,
+    83.8,
+    83.8,
+    89
+  ],
+  "8": [
+    79.1,
+    78.7,
+    79.8,
+    80.3,
+    80.6,
+    81.7,
+    81.8,
+    82.0,
+    83.1,
+    84.0,
+    84.5,
+    85
+  ],
+  "9": [
+    78.7,
+    79.6,
+    79.5,
+    79.6,
+    80.1,
+    81.2,
+    81.7,
+    82.7,
+    82.9,
+    84.0,
+    84.0,
+    86
+  ],
+  "10": [
+    78.9,
+    78.6,
+    78.6,
+    79.3,
+    79.4,
+    79.9,
+    80.3,
+    80.7,
+    81.0,
+    81.8,
+    81.9,
+    84
+  ],
+  "11": [
+    77.1,
+    77.1,
+    77.7,
+    78.0,
+    78.5,
+    78.2,
+    79.3,
+    79.1,
+    79.9,
+    80.5,
+    80.5,
+    82
+  ],
+  "12": [
+    74.3,
+    75.2,
+    76.4,
+    76.7,
+    77.0,
+    77.1,
+    76.8,
+    76.7,
+    77.0,
+    77.3,
+    78.0,
+    81
+  ],
+  "13": [
+    74.9,
+    75.5,
+    76.1,
+    77.1,
+    77.4,
+    77.8,
+    77.9,
+    78.8,
+    79.0,
+    80.0,
+    81.0,
+    79
+  ],
+  "14": [
+    78.3,
+    78.3,
+    78.5,
+    79.2,
+    79.1,
+    79.0,
+    79.6,
+    79.8,
+    80.5,
+    80.9,
+    81.4,
+    83
+  ],
+  "15": [
+    73.4,
+    73.4,
+    73.3,
+    74.4,
+    75.5,
+    76.6,
+    76.7,
+    77.7,
+    78.6,
+    78.9,
+    78.6,
+    80
+  ],
+  "16": [
+    76.0,
+    76.7,
+    76.4,
+    76.4,
+    77.6,
+    78.7,
+    79.6,
+    79.3,
+    79.3,
+    79.9,
+    81.1,
+    82
+  ],
+  "17": [
+    74.6,
+    74.3,
+    75.1,
+    76.0,
+    76.7,
+    77.5,
+    78.2,
+    78.2,
+    78.5,
+    78.5,
+    78.6,
+    81
+  ],
+  "18": [
+    75.2,
+    75.5,
+    75.4,
+    75.5,
+    75.6,
+    76.7,
+    77.3,
+    78.3,
+    78.1,
+    78.9,
+    78.6,
+    79
+  ],
+  "19": [
+    70.0,
+    70.8,
+    70.5,
+    71.1,
+    71.6,
+    71.5,
+    72.3,
+    72.5,
+    73.6,
+    74.3,
+    74.1,
+    75
+  ],
+  "20": [
+    72.8,
+    73.5,
+    73.2,
+    73.8,
+    74.0,
+    74.1,
+    74.6,
+    74.8,
+    74.8,
+    75.8,
+    76.9,
+    78
+  ],
+  "21": [
+    72.2,
+    73.3,
+    74.5,
+    74.8,
+    74.9,
+    75.1,
+    75.5,
+    76.7,
+    77.6,
+    78.5,
+    78.3,
+    76
+  ],
+  "22": [
+    71.6,
+    71.2,
+    71.6,
+    71.6,
+    71.4,
+    71.7,
+    72.3,
+    72.3,
+    72.5,
+    73.2,
+    72.9,
+    77
+  ],
+  "23": [
+    69.0,
+    69.3,
+    70.4,
+    70.8,
+    71.2,
+    72.3,
+    72.7,
+    73.6,
+    74.4,
+    74.1,
+    74.6,
+    74
+  ],
+  "24": [
+    75.2,
+    75.3,
+    76.3,
+    76.7,
+    76.5,
+    77.5,
+    77.8,
+    78.8,
+    79.1,
+    78.9,
+    79.6,
+    78
+  ],
+  "25": [
+    75.0,
+    76.0,
+    76.0,
+    76.6,
+    77.1,
+    76.9,
+    77.0,
+    77.4,
+    77.8,
+    77.7,
+    78.8,
+    81
+  ]
+};
+
+export const extendedFirmData = {
+  "1": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 106480,
+      "tiktokVideoViewsMonthly": 390342,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 28003,
+      "substackSubscribers": 17242
+    },
+    "youtubeExtended": {
+      "monthlyViews": 1436636,
+      "avgViewDurationSec": 306,
+      "uploadsPerMonth": 12,
+      "clickThroughRate": 3.5
+    },
+    "postsPerWeek": {
+      "linkedin": 16,
+      "twitter": 53,
+      "youtube": 5,
+      "instagram": 1,
+      "tiktok": 1,
+      "threads": 6
+    },
+    "executivePresence": {
+      "ceoName": "Larry Fink",
+      "ceoLinkedinFollowers": 140642,
+      "executiveCount": 8,
+      "monthlyExecPosts": 46,
+      "thoughtLeadershipScore": 90,
+      "mediaAppearancesMonthly": 4
+    },
+    "serpFeatures": {
+      "featuredSnippets": 171,
+      "paaOwnership": 101,
+      "knowledgePanels": 24,
+      "aiOverviewCitations": 209,
+      "videoCarouselRank": 46
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 830,
+      "chatgptCitationEstimate": 3346,
+      "claudeCitationEstimate": 1725,
+      "googleAIOverviewPresencePct": 73,
+      "aiVisibilityScore": 84
+    },
+    "eeat": {
+      "authorBiosCount": 77,
+      "credentialsCoverage": 91,
+      "schemaMarkupScore": 88,
+      "complianceDisclosureScore": 90,
+      "overallEEATScore": 89
+    },
+    "contentFunnel": {
+      "tofuPct": 33,
+      "mofuPct": 37,
+      "bofuPct": 30
+    },
+    "interactiveTools": {
+      "count": 11,
+      "examples": [
+        "College Savings Planner",
+        "Retirement Calculator",
+        "Fee Comparison Calculator",
+        "Factor Analysis Tool",
+        "Risk Analyzer",
+        "Monte Carlo Simulator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 223222,
+      "avgOpenRate": 46.4,
+      "frequency": "Daily"
+    },
+    "aiToolsAdopted": [
+      "Glean",
+      "Gamma",
+      "Midjourney"
+    ],
+    "complianceStack": [
+      "NICE Actimize",
+      "Mimecast",
+      "Proofpoint Archive"
+    ],
+    "stackMaturity": "Composable-AI",
+    "stackAge": 9,
+    "brandedTrafficPct": 33.8,
+    "socialShareOfVoice": 7.89,
+    "contentRefreshRate": 34.1,
+    "avgContentAgeMonths": 2.7
+  },
+  "2": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 101169,
+      "tiktokVideoViewsMonthly": 391412,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 28757,
+      "substackSubscribers": 14263
+    },
+    "youtubeExtended": {
+      "monthlyViews": 1596887,
+      "avgViewDurationSec": 114,
+      "uploadsPerMonth": 5,
+      "clickThroughRate": 2.8
+    },
+    "postsPerWeek": {
+      "linkedin": 13,
+      "twitter": 55,
+      "youtube": 6,
+      "instagram": 9,
+      "tiktok": 1,
+      "threads": 6
+    },
+    "executivePresence": {
+      "ceoName": "Salim Ramji",
+      "ceoLinkedinFollowers": 154317,
+      "executiveCount": 10,
+      "monthlyExecPosts": 41,
+      "thoughtLeadershipScore": 88,
+      "mediaAppearancesMonthly": 37
+    },
+    "serpFeatures": {
+      "featuredSnippets": 177,
+      "paaOwnership": 85,
+      "knowledgePanels": 7,
+      "aiOverviewCitations": 253,
+      "videoCarouselRank": 50
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 744,
+      "chatgptCitationEstimate": 3126,
+      "claudeCitationEstimate": 1590,
+      "googleAIOverviewPresencePct": 64,
+      "aiVisibilityScore": 85
+    },
+    "eeat": {
+      "authorBiosCount": 88,
+      "credentialsCoverage": 90,
+      "schemaMarkupScore": 93,
+      "complianceDisclosureScore": 99,
+      "overallEEATScore": 86
+    },
+    "contentFunnel": {
+      "tofuPct": 46,
+      "mofuPct": 28,
+      "bofuPct": 26
+    },
+    "interactiveTools": {
+      "count": 12,
+      "examples": [
+        "Goal Planner",
+        "Retirement Calculator",
+        "Fee Comparison Calculator",
+        "RMD Calculator",
+        "Rebalancing Tool",
+        "ESG Rating Tool",
+        "Monte Carlo Simulator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 270131,
+      "avgOpenRate": 37.6,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [
+      "Jasper"
+    ],
+    "complianceStack": [
+      "Proofpoint Archive",
+      "OneTrust",
+      "Smarsh",
+      "Global Relay"
+    ],
+    "stackMaturity": "Composable-AI",
+    "stackAge": 2,
+    "brandedTrafficPct": 28.4,
+    "socialShareOfVoice": 9.83,
+    "contentRefreshRate": 10.4,
+    "avgContentAgeMonths": 11.1
+  },
+  "3": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 98143,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 27522,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 1642388,
+      "avgViewDurationSec": 207,
+      "uploadsPerMonth": 20,
+      "clickThroughRate": 3.2
+    },
+    "postsPerWeek": {
+      "linkedin": 7,
+      "twitter": 50,
+      "youtube": 0,
+      "instagram": 3,
+      "tiktok": 1,
+      "threads": 0
+    },
+    "executivePresence": {
+      "ceoName": "Abigail Johnson",
+      "ceoLinkedinFollowers": 177262,
+      "executiveCount": 4,
+      "monthlyExecPosts": 40,
+      "thoughtLeadershipScore": 86,
+      "mediaAppearancesMonthly": 19
+    },
+    "serpFeatures": {
+      "featuredSnippets": 168,
+      "paaOwnership": 91,
+      "knowledgePanels": 8,
+      "aiOverviewCitations": 256,
+      "videoCarouselRank": 55
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 818,
+      "chatgptCitationEstimate": 2768,
+      "claudeCitationEstimate": 1785,
+      "googleAIOverviewPresencePct": 63,
+      "aiVisibilityScore": 85
+    },
+    "eeat": {
+      "authorBiosCount": 79,
+      "credentialsCoverage": 94,
+      "schemaMarkupScore": 87,
+      "complianceDisclosureScore": 92,
+      "overallEEATScore": 89
+    },
+    "contentFunnel": {
+      "tofuPct": 44,
+      "mofuPct": 26,
+      "bofuPct": 30
+    },
+    "interactiveTools": {
+      "count": 6,
+      "examples": [
+        "RMD Calculator",
+        "College Savings Planner",
+        "Fee Comparison Calculator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 261642,
+      "avgOpenRate": 24.8,
+      "frequency": "Weekly"
+    },
+    "aiToolsAdopted": [
+      "Glean",
+      "Custom LLMs",
+      "Writer.com",
+      "GitHub Copilot"
+    ],
+    "complianceStack": [
+      "Proofpoint Archive",
+      "NICE Actimize",
+      "OneTrust"
+    ],
+    "stackMaturity": "Composable-AI",
+    "stackAge": 2,
+    "brandedTrafficPct": 42.7,
+    "socialShareOfVoice": 14.34,
+    "contentRefreshRate": 26.7,
+    "avgContentAgeMonths": 2.6
+  },
+  "4": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 64122,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 6.5,
+      "threadsFollowers": 19826,
+      "substackSubscribers": 9322
+    },
+    "youtubeExtended": {
+      "monthlyViews": 976572,
+      "avgViewDurationSec": 119,
+      "uploadsPerMonth": 20,
+      "clickThroughRate": 6.0
+    },
+    "postsPerWeek": {
+      "linkedin": 6,
+      "twitter": 52,
+      "youtube": 5,
+      "instagram": 0,
+      "tiktok": 0,
+      "threads": 9
+    },
+    "executivePresence": {
+      "ceoName": "Yie-Hsin Hung",
+      "ceoLinkedinFollowers": 103275,
+      "executiveCount": 11,
+      "monthlyExecPosts": 18,
+      "thoughtLeadershipScore": 79,
+      "mediaAppearancesMonthly": 34
+    },
+    "serpFeatures": {
+      "featuredSnippets": 90,
+      "paaOwnership": 58,
+      "knowledgePanels": 4,
+      "aiOverviewCitations": 164,
+      "videoCarouselRank": 29
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 460,
+      "chatgptCitationEstimate": 2178,
+      "claudeCitationEstimate": 1080,
+      "googleAIOverviewPresencePct": 71,
+      "aiVisibilityScore": 77
+    },
+    "eeat": {
+      "authorBiosCount": 57,
+      "credentialsCoverage": 87,
+      "schemaMarkupScore": 80,
+      "complianceDisclosureScore": 85,
+      "overallEEATScore": 89
+    },
+    "contentFunnel": {
+      "tofuPct": 52,
+      "mofuPct": 35,
+      "bofuPct": 13
+    },
+    "interactiveTools": {
+      "count": 10,
+      "examples": [
+        "RMD Calculator",
+        "Retirement Calculator",
+        "Monte Carlo Simulator",
+        "Factor Analysis Tool",
+        "Asset Allocation Tool"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 153998,
+      "avgOpenRate": 46.2,
+      "frequency": "Daily"
+    },
+    "aiToolsAdopted": [
+      "Custom LLMs"
+    ],
+    "complianceStack": [
+      "Global Relay",
+      "Osano"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 5,
+    "brandedTrafficPct": 30.3,
+    "socialShareOfVoice": 5.32,
+    "contentRefreshRate": 10.3,
+    "avgContentAgeMonths": 4.9
+  },
+  "5": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 11180,
+      "substackSubscribers": 6817
+    },
+    "youtubeExtended": {
+      "monthlyViews": 583090,
+      "avgViewDurationSec": 414,
+      "uploadsPerMonth": 10,
+      "clickThroughRate": 4.8
+    },
+    "postsPerWeek": {
+      "linkedin": 19,
+      "twitter": 59,
+      "youtube": 0,
+      "instagram": 1,
+      "tiktok": 10,
+      "threads": 6
+    },
+    "executivePresence": {
+      "ceoName": "Dan Simkowitz",
+      "ceoLinkedinFollowers": 70323,
+      "executiveCount": 3,
+      "monthlyExecPosts": 8,
+      "thoughtLeadershipScore": 85,
+      "mediaAppearancesMonthly": 10
+    },
+    "serpFeatures": {
+      "featuredSnippets": 66,
+      "paaOwnership": 37,
+      "knowledgePanels": 28,
+      "aiOverviewCitations": 97,
+      "videoCarouselRank": 19
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 272,
+      "chatgptCitationEstimate": 1047,
+      "claudeCitationEstimate": 802,
+      "googleAIOverviewPresencePct": 69,
+      "aiVisibilityScore": 77
+    },
+    "eeat": {
+      "authorBiosCount": 39,
+      "credentialsCoverage": 82,
+      "schemaMarkupScore": 86,
+      "complianceDisclosureScore": 85,
+      "overallEEATScore": 80
+    },
+    "contentFunnel": {
+      "tofuPct": 39,
+      "mofuPct": 36,
+      "bofuPct": 25
+    },
+    "interactiveTools": {
+      "count": 4,
+      "examples": [
+        "Goal Planner",
+        "Monte Carlo Simulator",
+        "Risk Analyzer",
+        "Rebalancing Tool",
+        "Portfolio Builder"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 91785,
+      "avgOpenRate": 36.6,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [
+      "Midjourney",
+      "Writer.com",
+      "Perplexity Enterprise"
+    ],
+    "complianceStack": [
+      "Smarsh",
+      "Hearsay",
+      "Theta Lake",
+      "Mimecast",
+      "OneTrust"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 4,
+    "brandedTrafficPct": 35.7,
+    "socialShareOfVoice": 5.38,
+    "contentRefreshRate": 11.7,
+    "avgContentAgeMonths": 12.5
+  },
+  "6": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 63043,
+      "tiktokVideoViewsMonthly": 262824,
+      "tiktokEngagementRate": 3.0,
+      "threadsFollowers": 22251,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 1184310,
+      "avgViewDurationSec": 225,
+      "uploadsPerMonth": 3,
+      "clickThroughRate": 2.6
+    },
+    "postsPerWeek": {
+      "linkedin": 30,
+      "twitter": 27,
+      "youtube": 5,
+      "instagram": 6,
+      "tiktok": 9,
+      "threads": 8
+    },
+    "executivePresence": {
+      "ceoName": "George Gatch",
+      "ceoLinkedinFollowers": 92008,
+      "executiveCount": 12,
+      "monthlyExecPosts": 20,
+      "thoughtLeadershipScore": 86,
+      "mediaAppearancesMonthly": 4
+    },
+    "serpFeatures": {
+      "featuredSnippets": 110,
+      "paaOwnership": 55,
+      "knowledgePanels": 34,
+      "aiOverviewCitations": 164,
+      "videoCarouselRank": 36
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 556,
+      "chatgptCitationEstimate": 1772,
+      "claudeCitationEstimate": 1145,
+      "googleAIOverviewPresencePct": 65,
+      "aiVisibilityScore": 88
+    },
+    "eeat": {
+      "authorBiosCount": 61,
+      "credentialsCoverage": 83,
+      "schemaMarkupScore": 84,
+      "complianceDisclosureScore": 93,
+      "overallEEATScore": 86
+    },
+    "contentFunnel": {
+      "tofuPct": 51,
+      "mofuPct": 38,
+      "bofuPct": 11
+    },
+    "interactiveTools": {
+      "count": 13,
+      "examples": [
+        "Tax-Loss Harvester",
+        "ESG Rating Tool",
+        "Retirement Calculator",
+        "Risk Analyzer",
+        "Goal Planner",
+        "Monte Carlo Simulator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 176609,
+      "avgOpenRate": 39.6,
+      "frequency": "Weekly"
+    },
+    "aiToolsAdopted": [
+      "GitHub Copilot",
+      "Glean",
+      "ChatGPT Enterprise",
+      "Claude for Business",
+      "Runway"
+    ],
+    "complianceStack": [
+      "Mimecast",
+      "Theta Lake",
+      "NICE Actimize"
+    ],
+    "stackMaturity": "Composable-AI",
+    "stackAge": 4,
+    "brandedTrafficPct": 45.4,
+    "socialShareOfVoice": 8.79,
+    "contentRefreshRate": 40.6,
+    "avgContentAgeMonths": 10.8
+  },
+  "7": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 56670,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 3.3,
+      "threadsFollowers": 20648,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 960123,
+      "avgViewDurationSec": 92,
+      "uploadsPerMonth": 5,
+      "clickThroughRate": 6.3
+    },
+    "postsPerWeek": {
+      "linkedin": 17,
+      "twitter": 16,
+      "youtube": 8,
+      "instagram": 7,
+      "tiktok": 0,
+      "threads": 8
+    },
+    "executivePresence": {
+      "ceoName": "Marc Nachmann",
+      "ceoLinkedinFollowers": 96174,
+      "executiveCount": 4,
+      "monthlyExecPosts": 37,
+      "thoughtLeadershipScore": 83,
+      "mediaAppearancesMonthly": 31
+    },
+    "serpFeatures": {
+      "featuredSnippets": 109,
+      "paaOwnership": 74,
+      "knowledgePanels": 20,
+      "aiOverviewCitations": 177,
+      "videoCarouselRank": 36
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 537,
+      "chatgptCitationEstimate": 2078,
+      "claudeCitationEstimate": 1171,
+      "googleAIOverviewPresencePct": 60,
+      "aiVisibilityScore": 82
+    },
+    "eeat": {
+      "authorBiosCount": 62,
+      "credentialsCoverage": 94,
+      "schemaMarkupScore": 88,
+      "complianceDisclosureScore": 88,
+      "overallEEATScore": 93
+    },
+    "contentFunnel": {
+      "tofuPct": 37,
+      "mofuPct": 33,
+      "bofuPct": 30
+    },
+    "interactiveTools": {
+      "count": 19,
+      "examples": [
+        "Market Outlook Dashboard",
+        "Asset Allocation Tool",
+        "Income Estimator",
+        "Portfolio Builder",
+        "College Savings Planner",
+        "Rebalancing Tool"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 143574,
+      "avgOpenRate": 30.7,
+      "frequency": "Daily"
+    },
+    "aiToolsAdopted": [
+      "Writer.com",
+      "Midjourney",
+      "GitHub Copilot"
+    ],
+    "complianceStack": [
+      "OneTrust",
+      "Global Relay",
+      "Mimecast"
+    ],
+    "stackMaturity": "Composable-AI",
+    "stackAge": 9,
+    "brandedTrafficPct": 43.6,
+    "socialShareOfVoice": 3.09,
+    "contentRefreshRate": 36.3,
+    "avgContentAgeMonths": 6.7
+  },
+  "8": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 72757,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 19416,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 1092688,
+      "avgViewDurationSec": 297,
+      "uploadsPerMonth": 25,
+      "clickThroughRate": 2.9
+    },
+    "postsPerWeek": {
+      "linkedin": 32,
+      "twitter": 13,
+      "youtube": 8,
+      "instagram": 0,
+      "tiktok": 6,
+      "threads": 9
+    },
+    "executivePresence": {
+      "ceoName": "Mike Gitlin",
+      "ceoLinkedinFollowers": 106009,
+      "executiveCount": 3,
+      "monthlyExecPosts": 13,
+      "thoughtLeadershipScore": 87,
+      "mediaAppearancesMonthly": 29
+    },
+    "serpFeatures": {
+      "featuredSnippets": 92,
+      "paaOwnership": 64,
+      "knowledgePanels": 3,
+      "aiOverviewCitations": 144,
+      "videoCarouselRank": 30
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 512,
+      "chatgptCitationEstimate": 1854,
+      "claudeCitationEstimate": 1303,
+      "googleAIOverviewPresencePct": 62,
+      "aiVisibilityScore": 86
+    },
+    "eeat": {
+      "authorBiosCount": 54,
+      "credentialsCoverage": 77,
+      "schemaMarkupScore": 85,
+      "complianceDisclosureScore": 80,
+      "overallEEATScore": 88
+    },
+    "contentFunnel": {
+      "tofuPct": 47,
+      "mofuPct": 26,
+      "bofuPct": 27
+    },
+    "interactiveTools": {
+      "count": 14,
+      "examples": [
+        "Retirement Calculator",
+        "RMD Calculator",
+        "Monte Carlo Simulator",
+        "ETF Screener"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 167898,
+      "avgOpenRate": 46.7,
+      "frequency": "Weekly"
+    },
+    "aiToolsAdopted": [
+      "Tome"
+    ],
+    "complianceStack": [
+      "OneTrust",
+      "Hearsay",
+      "NICE Actimize"
+    ],
+    "stackMaturity": "Composable-AI",
+    "stackAge": 4,
+    "brandedTrafficPct": 43.6,
+    "socialShareOfVoice": 4.6,
+    "contentRefreshRate": 20.5,
+    "avgContentAgeMonths": 9.3
+  },
+  "9": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 36914,
+      "tiktokVideoViewsMonthly": 150475,
+      "tiktokEngagementRate": 5.7,
+      "threadsFollowers": 13066,
+      "substackSubscribers": 5518
+    },
+    "youtubeExtended": {
+      "monthlyViews": 646287,
+      "avgViewDurationSec": 279,
+      "uploadsPerMonth": 4,
+      "clickThroughRate": 4.8
+    },
+    "postsPerWeek": {
+      "linkedin": 24,
+      "twitter": 5,
+      "youtube": 6,
+      "instagram": 7,
+      "tiktok": 1,
+      "threads": 6
+    },
+    "executivePresence": {
+      "ceoName": "Emmanuel Roman",
+      "ceoLinkedinFollowers": 72847,
+      "executiveCount": 13,
+      "monthlyExecPosts": 37,
+      "thoughtLeadershipScore": 89,
+      "mediaAppearancesMonthly": 11
+    },
+    "serpFeatures": {
+      "featuredSnippets": 62,
+      "paaOwnership": 42,
+      "knowledgePanels": 17,
+      "aiOverviewCitations": 99,
+      "videoCarouselRank": 22
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 346,
+      "chatgptCitationEstimate": 1187,
+      "claudeCitationEstimate": 790,
+      "googleAIOverviewPresencePct": 63,
+      "aiVisibilityScore": 84
+    },
+    "eeat": {
+      "authorBiosCount": 39,
+      "credentialsCoverage": 78,
+      "schemaMarkupScore": 79,
+      "complianceDisclosureScore": 88,
+      "overallEEATScore": 81
+    },
+    "contentFunnel": {
+      "tofuPct": 54,
+      "mofuPct": 39,
+      "bofuPct": 7
+    },
+    "interactiveTools": {
+      "count": 21,
+      "examples": [
+        "RMD Calculator",
+        "Fee Comparison Calculator",
+        "ETF Screener",
+        "Market Outlook Dashboard",
+        "Rebalancing Tool",
+        "Retirement Calculator",
+        "Income Estimator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 87709,
+      "avgOpenRate": 42.7,
+      "frequency": "Bi-weekly"
+    },
+    "aiToolsAdopted": [
+      "Tome",
+      "Gamma",
+      "Claude for Business",
+      "Glean",
+      "ChatGPT Enterprise"
+    ],
+    "complianceStack": [
+      "Global Relay",
+      "OneTrust",
+      "Mimecast"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 8,
+    "brandedTrafficPct": 47.2,
+    "socialShareOfVoice": 2.75,
+    "contentRefreshRate": 24.2,
+    "avgContentAgeMonths": 10.5
+  },
+  "10": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 10893,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 646885,
+      "avgViewDurationSec": 184,
+      "uploadsPerMonth": 8,
+      "clickThroughRate": 3.2
+    },
+    "postsPerWeek": {
+      "linkedin": 33,
+      "twitter": 22,
+      "youtube": 8,
+      "instagram": 9,
+      "tiktok": 4,
+      "threads": 1
+    },
+    "executivePresence": {
+      "ceoName": "Rob Sharps",
+      "ceoLinkedinFollowers": 70386,
+      "executiveCount": 7,
+      "monthlyExecPosts": 22,
+      "thoughtLeadershipScore": 81,
+      "mediaAppearancesMonthly": 13
+    },
+    "serpFeatures": {
+      "featuredSnippets": 60,
+      "paaOwnership": 42,
+      "knowledgePanels": 8,
+      "aiOverviewCitations": 89,
+      "videoCarouselRank": 22
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 325,
+      "chatgptCitationEstimate": 1271,
+      "claudeCitationEstimate": 639,
+      "googleAIOverviewPresencePct": 54,
+      "aiVisibilityScore": 75
+    },
+    "eeat": {
+      "authorBiosCount": 40,
+      "credentialsCoverage": 83,
+      "schemaMarkupScore": 84,
+      "complianceDisclosureScore": 86,
+      "overallEEATScore": 83
+    },
+    "contentFunnel": {
+      "tofuPct": 40,
+      "mofuPct": 30,
+      "bofuPct": 30
+    },
+    "interactiveTools": {
+      "count": 4,
+      "examples": [
+        "Income Estimator",
+        "Portfolio Builder",
+        "Factor Analysis Tool",
+        "Rebalancing Tool",
+        "Goal Planner"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 95762,
+      "avgOpenRate": 37.0,
+      "frequency": "Daily"
+    },
+    "aiToolsAdopted": [
+      "Writer.com",
+      "Perplexity Enterprise",
+      "Tome"
+    ],
+    "complianceStack": [
+      "Global Relay",
+      "OneTrust",
+      "Ketch",
+      "Proofpoint Archive"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 7,
+    "brandedTrafficPct": 49.3,
+    "socialShareOfVoice": 5.4,
+    "contentRefreshRate": 15.7,
+    "avgContentAgeMonths": 8.3
+  },
+  "11": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 11670,
+      "substackSubscribers": 6342
+    },
+    "youtubeExtended": {
+      "monthlyViews": 550266,
+      "avgViewDurationSec": 237,
+      "uploadsPerMonth": 24,
+      "clickThroughRate": 3.6
+    },
+    "postsPerWeek": {
+      "linkedin": 32,
+      "twitter": 9,
+      "youtube": 3,
+      "instagram": 4,
+      "tiktok": 12,
+      "threads": 10
+    },
+    "executivePresence": {
+      "ceoName": "Andrew Schlossberg",
+      "ceoLinkedinFollowers": 65723,
+      "executiveCount": 15,
+      "monthlyExecPosts": 20,
+      "thoughtLeadershipScore": 80,
+      "mediaAppearancesMonthly": 9
+    },
+    "serpFeatures": {
+      "featuredSnippets": 64,
+      "paaOwnership": 41,
+      "knowledgePanels": 17,
+      "aiOverviewCitations": 105,
+      "videoCarouselRank": 17
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 287,
+      "chatgptCitationEstimate": 1130,
+      "claudeCitationEstimate": 773,
+      "googleAIOverviewPresencePct": 58,
+      "aiVisibilityScore": 84
+    },
+    "eeat": {
+      "authorBiosCount": 31,
+      "credentialsCoverage": 81,
+      "schemaMarkupScore": 79,
+      "complianceDisclosureScore": 81,
+      "overallEEATScore": 82
+    },
+    "contentFunnel": {
+      "tofuPct": 47,
+      "mofuPct": 40,
+      "bofuPct": 13
+    },
+    "interactiveTools": {
+      "count": 17,
+      "examples": [
+        "Portfolio Builder",
+        "Rebalancing Tool",
+        "Goal Planner"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 102754,
+      "avgOpenRate": 37.7,
+      "frequency": "Daily"
+    },
+    "aiToolsAdopted": [
+      "Midjourney",
+      "Runway"
+    ],
+    "complianceStack": [
+      "Proofpoint Archive",
+      "Smarsh"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 3,
+    "brandedTrafficPct": 43.8,
+    "socialShareOfVoice": 4.73,
+    "contentRefreshRate": 39.1,
+    "avgContentAgeMonths": 4.2
+  },
+  "12": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 34440,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 10617,
+      "substackSubscribers": 7100
+    },
+    "youtubeExtended": {
+      "monthlyViews": 702386,
+      "avgViewDurationSec": 90,
+      "uploadsPerMonth": 23,
+      "clickThroughRate": 6.8
+    },
+    "postsPerWeek": {
+      "linkedin": 32,
+      "twitter": 31,
+      "youtube": 0,
+      "instagram": 3,
+      "tiktok": 8,
+      "threads": 5
+    },
+    "executivePresence": {
+      "ceoName": "Jenny Johnson",
+      "ceoLinkedinFollowers": 66354,
+      "executiveCount": 10,
+      "monthlyExecPosts": 48,
+      "thoughtLeadershipScore": 80,
+      "mediaAppearancesMonthly": 5
+    },
+    "serpFeatures": {
+      "featuredSnippets": 58,
+      "paaOwnership": 40,
+      "knowledgePanels": 18,
+      "aiOverviewCitations": 94,
+      "videoCarouselRank": 21
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 283,
+      "chatgptCitationEstimate": 1370,
+      "claudeCitationEstimate": 743,
+      "googleAIOverviewPresencePct": 59,
+      "aiVisibilityScore": 74
+    },
+    "eeat": {
+      "authorBiosCount": 33,
+      "credentialsCoverage": 71,
+      "schemaMarkupScore": 83,
+      "complianceDisclosureScore": 82,
+      "overallEEATScore": 74
+    },
+    "contentFunnel": {
+      "tofuPct": 37,
+      "mofuPct": 28,
+      "bofuPct": 35
+    },
+    "interactiveTools": {
+      "count": 17,
+      "examples": [
+        "Asset Allocation Tool",
+        "Market Outlook Dashboard",
+        "College Savings Planner"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 90005,
+      "avgOpenRate": 40.3,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [
+      "Custom LLMs",
+      "Midjourney",
+      "Notion AI",
+      "Glean",
+      "Writer.com",
+      "GitHub Copilot",
+      "Perplexity Enterprise",
+      "Claude for Business"
+    ],
+    "complianceStack": [
+      "Global Relay",
+      "Proofpoint Archive",
+      "Mimecast"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 6,
+    "brandedTrafficPct": 62.4,
+    "socialShareOfVoice": 4.04,
+    "contentRefreshRate": 35.9,
+    "avgContentAgeMonths": 5.4
+  },
+  "13": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 4.1,
+      "threadsFollowers": 11345,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 719378,
+      "avgViewDurationSec": 285,
+      "uploadsPerMonth": 14,
+      "clickThroughRate": 7.4
+    },
+    "postsPerWeek": {
+      "linkedin": 12,
+      "twitter": 36,
+      "youtube": 0,
+      "instagram": 2,
+      "tiktok": 8,
+      "threads": 9
+    },
+    "executivePresence": {
+      "ceoName": "Daniel Gamba",
+      "ceoLinkedinFollowers": 60774,
+      "executiveCount": 4,
+      "monthlyExecPosts": 36,
+      "thoughtLeadershipScore": 72,
+      "mediaAppearancesMonthly": 35
+    },
+    "serpFeatures": {
+      "featuredSnippets": 71,
+      "paaOwnership": 34,
+      "knowledgePanels": 9,
+      "aiOverviewCitations": 93,
+      "videoCarouselRank": 20
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 286,
+      "chatgptCitationEstimate": 1189,
+      "claudeCitationEstimate": 821,
+      "googleAIOverviewPresencePct": 54,
+      "aiVisibilityScore": 79
+    },
+    "eeat": {
+      "authorBiosCount": 37,
+      "credentialsCoverage": 79,
+      "schemaMarkupScore": 81,
+      "complianceDisclosureScore": 80,
+      "overallEEATScore": 76
+    },
+    "contentFunnel": {
+      "tofuPct": 50,
+      "mofuPct": 40,
+      "bofuPct": 10
+    },
+    "interactiveTools": {
+      "count": 20,
+      "examples": [
+        "Retirement Calculator",
+        "Risk Analyzer",
+        "Monte Carlo Simulator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 101310,
+      "avgOpenRate": 29.5,
+      "frequency": "Weekly"
+    },
+    "aiToolsAdopted": [
+      "GitHub Copilot",
+      "Jasper"
+    ],
+    "complianceStack": [
+      "NICE Actimize",
+      "Hearsay"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 5,
+    "brandedTrafficPct": 61.1,
+    "socialShareOfVoice": 1.82,
+    "contentRefreshRate": 35.1,
+    "avgContentAgeMonths": 5.5
+  },
+  "14": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 39514,
+      "tiktokVideoViewsMonthly": 179147,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 11235,
+      "substackSubscribers": 5581
+    },
+    "youtubeExtended": {
+      "monthlyViews": 725485,
+      "avgViewDurationSec": 390,
+      "uploadsPerMonth": 11,
+      "clickThroughRate": 5.5
+    },
+    "postsPerWeek": {
+      "linkedin": 30,
+      "twitter": 49,
+      "youtube": 4,
+      "instagram": 7,
+      "tiktok": 4,
+      "threads": 3
+    },
+    "executivePresence": {
+      "ceoName": "Jean Hynes",
+      "ceoLinkedinFollowers": 73587,
+      "executiveCount": 10,
+      "monthlyExecPosts": 14,
+      "thoughtLeadershipScore": 78,
+      "mediaAppearancesMonthly": 26
+    },
+    "serpFeatures": {
+      "featuredSnippets": 65,
+      "paaOwnership": 40,
+      "knowledgePanels": 18,
+      "aiOverviewCitations": 82,
+      "videoCarouselRank": 21
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 309,
+      "chatgptCitationEstimate": 1022,
+      "claudeCitationEstimate": 798,
+      "googleAIOverviewPresencePct": 67,
+      "aiVisibilityScore": 86
+    },
+    "eeat": {
+      "authorBiosCount": 39,
+      "credentialsCoverage": 82,
+      "schemaMarkupScore": 75,
+      "complianceDisclosureScore": 87,
+      "overallEEATScore": 87
+    },
+    "contentFunnel": {
+      "tofuPct": 41,
+      "mofuPct": 32,
+      "bofuPct": 27
+    },
+    "interactiveTools": {
+      "count": 9,
+      "examples": [
+        "ESG Rating Tool",
+        "Monte Carlo Simulator",
+        "RMD Calculator",
+        "College Savings Planner",
+        "Rebalancing Tool",
+        "Factor Analysis Tool",
+        "Retirement Calculator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 99693,
+      "avgOpenRate": 45.5,
+      "frequency": "Daily"
+    },
+    "aiToolsAdopted": [
+      "Perplexity Enterprise",
+      "Custom LLMs",
+      "ChatGPT Enterprise",
+      "Tome",
+      "Copy.ai"
+    ],
+    "complianceStack": [
+      "Global Relay",
+      "Proofpoint Archive",
+      "Theta Lake"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 7,
+    "brandedTrafficPct": 32.0,
+    "socialShareOfVoice": 2.23,
+    "contentRefreshRate": 26.3,
+    "avgContentAgeMonths": 13.7
+  },
+  "15": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 168371,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 13244,
+      "substackSubscribers": 5613
+    },
+    "youtubeExtended": {
+      "monthlyViews": 619758,
+      "avgViewDurationSec": 225,
+      "uploadsPerMonth": 19,
+      "clickThroughRate": 2.7
+    },
+    "postsPerWeek": {
+      "linkedin": 26,
+      "twitter": 48,
+      "youtube": 4,
+      "instagram": 9,
+      "tiktok": 6,
+      "threads": 10
+    },
+    "executivePresence": {
+      "ceoName": "Jose Minaya",
+      "ceoLinkedinFollowers": 72453,
+      "executiveCount": 4,
+      "monthlyExecPosts": 51,
+      "thoughtLeadershipScore": 75,
+      "mediaAppearancesMonthly": 32
+    },
+    "serpFeatures": {
+      "featuredSnippets": 54,
+      "paaOwnership": 44,
+      "knowledgePanels": 35,
+      "aiOverviewCitations": 91,
+      "videoCarouselRank": 20
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 334,
+      "chatgptCitationEstimate": 1248,
+      "claudeCitationEstimate": 712,
+      "googleAIOverviewPresencePct": 56,
+      "aiVisibilityScore": 81
+    },
+    "eeat": {
+      "authorBiosCount": 31,
+      "credentialsCoverage": 71,
+      "schemaMarkupScore": 66,
+      "complianceDisclosureScore": 79,
+      "overallEEATScore": 79
+    },
+    "contentFunnel": {
+      "tofuPct": 33,
+      "mofuPct": 28,
+      "bofuPct": 39
+    },
+    "interactiveTools": {
+      "count": 10,
+      "examples": [
+        "Asset Allocation Tool",
+        "Goal Planner",
+        "Market Outlook Dashboard",
+        "Fee Comparison Calculator",
+        "Monte Carlo Simulator",
+        "ESG Rating Tool",
+        "Rebalancing Tool"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 98515,
+      "avgOpenRate": 40.9,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [
+      "Notion AI",
+      "Custom LLMs"
+    ],
+    "complianceStack": [
+      "Proofpoint Archive",
+      "Smarsh",
+      "Theta Lake",
+      "Global Relay",
+      "OneTrust"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 8,
+    "brandedTrafficPct": 63.0,
+    "socialShareOfVoice": 5.71,
+    "contentRefreshRate": 11.4,
+    "avgContentAgeMonths": 10.2
+  },
+  "16": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 282384,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 21429,
+      "substackSubscribers": 10669
+    },
+    "youtubeExtended": {
+      "monthlyViews": 1137672,
+      "avgViewDurationSec": 209,
+      "uploadsPerMonth": 12,
+      "clickThroughRate": 6.3
+    },
+    "postsPerWeek": {
+      "linkedin": 3,
+      "twitter": 22,
+      "youtube": 2,
+      "instagram": 2,
+      "tiktok": 8,
+      "threads": 4
+    },
+    "executivePresence": {
+      "ceoName": "Valerie Baudson",
+      "ceoLinkedinFollowers": 113313,
+      "executiveCount": 4,
+      "monthlyExecPosts": 50,
+      "thoughtLeadershipScore": 87,
+      "mediaAppearancesMonthly": 3
+    },
+    "serpFeatures": {
+      "featuredSnippets": 92,
+      "paaOwnership": 62,
+      "knowledgePanels": 15,
+      "aiOverviewCitations": 160,
+      "videoCarouselRank": 27
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 483,
+      "chatgptCitationEstimate": 1731,
+      "claudeCitationEstimate": 1142,
+      "googleAIOverviewPresencePct": 64,
+      "aiVisibilityScore": 72
+    },
+    "eeat": {
+      "authorBiosCount": 58,
+      "credentialsCoverage": 83,
+      "schemaMarkupScore": 83,
+      "complianceDisclosureScore": 86,
+      "overallEEATScore": 75
+    },
+    "contentFunnel": {
+      "tofuPct": 44,
+      "mofuPct": 32,
+      "bofuPct": 24
+    },
+    "interactiveTools": {
+      "count": 22,
+      "examples": [
+        "Tax-Loss Harvester",
+        "Market Outlook Dashboard",
+        "Monte Carlo Simulator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 177716,
+      "avgOpenRate": 23.6,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [
+      "GitHub Copilot",
+      "Runway",
+      "Jasper",
+      "Custom LLMs",
+      "Perplexity Enterprise",
+      "Gamma",
+      "Glean"
+    ],
+    "complianceStack": [
+      "Ketch",
+      "Hearsay",
+      "Global Relay",
+      "NICE Actimize"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 9,
+    "brandedTrafficPct": 53.5,
+    "socialShareOfVoice": 5.57,
+    "contentRefreshRate": 28.3,
+    "avgContentAgeMonths": 5.5
+  },
+  "17": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 20465,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 931623,
+      "avgViewDurationSec": 332,
+      "uploadsPerMonth": 4,
+      "clickThroughRate": 2.5
+    },
+    "postsPerWeek": {
+      "linkedin": 8,
+      "twitter": 10,
+      "youtube": 6,
+      "instagram": 1,
+      "tiktok": 11,
+      "threads": 5
+    },
+    "executivePresence": {
+      "ceoName": "Hanneke Smits",
+      "ceoLinkedinFollowers": 113727,
+      "executiveCount": 11,
+      "monthlyExecPosts": 11,
+      "thoughtLeadershipScore": 82,
+      "mediaAppearancesMonthly": 37
+    },
+    "serpFeatures": {
+      "featuredSnippets": 105,
+      "paaOwnership": 68,
+      "knowledgePanels": 26,
+      "aiOverviewCitations": 149,
+      "videoCarouselRank": 34
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 559,
+      "chatgptCitationEstimate": 2165,
+      "claudeCitationEstimate": 1247,
+      "googleAIOverviewPresencePct": 57,
+      "aiVisibilityScore": 78
+    },
+    "eeat": {
+      "authorBiosCount": 55,
+      "credentialsCoverage": 77,
+      "schemaMarkupScore": 70,
+      "complianceDisclosureScore": 86,
+      "overallEEATScore": 80
+    },
+    "contentFunnel": {
+      "tofuPct": 37,
+      "mofuPct": 28,
+      "bofuPct": 35
+    },
+    "interactiveTools": {
+      "count": 14,
+      "examples": [
+        "College Savings Planner",
+        "Portfolio Builder",
+        "RMD Calculator",
+        "Asset Allocation Tool",
+        "Tax-Loss Harvester",
+        "Risk Analyzer",
+        "Goal Planner"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 172153,
+      "avgOpenRate": 47.3,
+      "frequency": "Daily"
+    },
+    "aiToolsAdopted": [
+      "ChatGPT Enterprise",
+      "Writer.com",
+      "Claude for Business",
+      "Gamma",
+      "Copy.ai"
+    ],
+    "complianceStack": [
+      "Smarsh",
+      "Hearsay",
+      "Osano",
+      "Proofpoint Archive"
+    ],
+    "stackMaturity": "Composable-AI",
+    "stackAge": 2,
+    "brandedTrafficPct": 30.7,
+    "socialShareOfVoice": 7.54,
+    "contentRefreshRate": 9.0,
+    "avgContentAgeMonths": 11.0
+  },
+  "18": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 4.2,
+      "threadsFollowers": 6860,
+      "substackSubscribers": 3814
+    },
+    "youtubeExtended": {
+      "monthlyViews": 353306,
+      "avgViewDurationSec": 393,
+      "uploadsPerMonth": 17,
+      "clickThroughRate": 4.9
+    },
+    "postsPerWeek": {
+      "linkedin": 22,
+      "twitter": 7,
+      "youtube": 3,
+      "instagram": 6,
+      "tiktok": 9,
+      "threads": 0
+    },
+    "executivePresence": {
+      "ceoName": "Peter Harrison",
+      "ceoLinkedinFollowers": 34092,
+      "executiveCount": 7,
+      "monthlyExecPosts": 21,
+      "thoughtLeadershipScore": 83,
+      "mediaAppearancesMonthly": 10
+    },
+    "serpFeatures": {
+      "featuredSnippets": 43,
+      "paaOwnership": 23,
+      "knowledgePanels": 0,
+      "aiOverviewCitations": 51,
+      "videoCarouselRank": 13
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 180,
+      "chatgptCitationEstimate": 723,
+      "claudeCitationEstimate": 477,
+      "googleAIOverviewPresencePct": 53,
+      "aiVisibilityScore": 69
+    },
+    "eeat": {
+      "authorBiosCount": 21,
+      "credentialsCoverage": 70,
+      "schemaMarkupScore": 77,
+      "complianceDisclosureScore": 74,
+      "overallEEATScore": 78
+    },
+    "contentFunnel": {
+      "tofuPct": 32,
+      "mofuPct": 35,
+      "bofuPct": 33
+    },
+    "interactiveTools": {
+      "count": 21,
+      "examples": [
+        "RMD Calculator",
+        "College Savings Planner",
+        "Monte Carlo Simulator",
+        "Goal Planner",
+        "Asset Allocation Tool",
+        "Portfolio Builder"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 58290,
+      "avgOpenRate": 47.1,
+      "frequency": "Weekly"
+    },
+    "aiToolsAdopted": [
+      "Notion AI",
+      "Gamma",
+      "Copy.ai"
+    ],
+    "complianceStack": [
+      "Mimecast",
+      "Global Relay"
+    ],
+    "stackMaturity": "Transitional",
+    "stackAge": 7,
+    "brandedTrafficPct": 48.6,
+    "socialShareOfVoice": 2.57,
+    "contentRefreshRate": 21.5,
+    "avgContentAgeMonths": 5.7
+  },
+  "19": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 4849,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 272493,
+      "avgViewDurationSec": 411,
+      "uploadsPerMonth": 17,
+      "clickThroughRate": 4.6
+    },
+    "postsPerWeek": {
+      "linkedin": 31,
+      "twitter": 48,
+      "youtube": 5,
+      "instagram": 10,
+      "tiktok": 0,
+      "threads": 5
+    },
+    "executivePresence": {
+      "ceoName": "Stephen Bird",
+      "ceoLinkedinFollowers": 21486,
+      "executiveCount": 4,
+      "monthlyExecPosts": 38,
+      "thoughtLeadershipScore": 74,
+      "mediaAppearancesMonthly": 21
+    },
+    "serpFeatures": {
+      "featuredSnippets": 26,
+      "paaOwnership": 15,
+      "knowledgePanels": 2,
+      "aiOverviewCitations": 36,
+      "videoCarouselRank": 7
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 118,
+      "chatgptCitationEstimate": 390,
+      "claudeCitationEstimate": 296,
+      "googleAIOverviewPresencePct": 58,
+      "aiVisibilityScore": 65
+    },
+    "eeat": {
+      "authorBiosCount": 13,
+      "credentialsCoverage": 77,
+      "schemaMarkupScore": 74,
+      "complianceDisclosureScore": 79,
+      "overallEEATScore": 75
+    },
+    "contentFunnel": {
+      "tofuPct": 55,
+      "mofuPct": 26,
+      "bofuPct": 19
+    },
+    "interactiveTools": {
+      "count": 17,
+      "examples": [
+        "Goal Planner",
+        "Fee Comparison Calculator",
+        "Tax-Loss Harvester",
+        "Market Outlook Dashboard",
+        "ESG Rating Tool",
+        "Retirement Calculator",
+        "ETF Screener"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 35465,
+      "avgOpenRate": 43.1,
+      "frequency": "Bi-weekly"
+    },
+    "aiToolsAdopted": [],
+    "complianceStack": [
+      "Smarsh",
+      "OneTrust",
+      "NICE Actimize"
+    ],
+    "stackMaturity": "Legacy",
+    "stackAge": 9,
+    "brandedTrafficPct": 45.9,
+    "socialShareOfVoice": 0.89,
+    "contentRefreshRate": 20.7,
+    "avgContentAgeMonths": 5.4
+  },
+  "20": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 6.2,
+      "threadsFollowers": 7073,
+      "substackSubscribers": 4194
+    },
+    "youtubeExtended": {
+      "monthlyViews": 355474,
+      "avgViewDurationSec": 133,
+      "uploadsPerMonth": 11,
+      "clickThroughRate": 5.1
+    },
+    "postsPerWeek": {
+      "linkedin": 24,
+      "twitter": 57,
+      "youtube": 2,
+      "instagram": 10,
+      "tiktok": 11,
+      "threads": 10
+    },
+    "executivePresence": {
+      "ceoName": "Mike Roberge",
+      "ceoLinkedinFollowers": 44949,
+      "executiveCount": 4,
+      "monthlyExecPosts": 49,
+      "thoughtLeadershipScore": 80,
+      "mediaAppearancesMonthly": 29
+    },
+    "serpFeatures": {
+      "featuredSnippets": 40,
+      "paaOwnership": 21,
+      "knowledgePanels": 2,
+      "aiOverviewCitations": 54,
+      "videoCarouselRank": 11
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 226,
+      "chatgptCitationEstimate": 746,
+      "claudeCitationEstimate": 413,
+      "googleAIOverviewPresencePct": 59,
+      "aiVisibilityScore": 70
+    },
+    "eeat": {
+      "authorBiosCount": 19,
+      "credentialsCoverage": 71,
+      "schemaMarkupScore": 79,
+      "complianceDisclosureScore": 85,
+      "overallEEATScore": 78
+    },
+    "contentFunnel": {
+      "tofuPct": 53,
+      "mofuPct": 26,
+      "bofuPct": 21
+    },
+    "interactiveTools": {
+      "count": 13,
+      "examples": [
+        "Asset Allocation Tool",
+        "Tax-Loss Harvester",
+        "Goal Planner",
+        "Retirement Calculator",
+        "RMD Calculator",
+        "College Savings Planner",
+        "Rebalancing Tool"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 65562,
+      "avgOpenRate": 26.3,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [],
+    "complianceStack": [
+      "Theta Lake",
+      "OneTrust",
+      "NICE Actimize",
+      "Proofpoint Archive",
+      "Hearsay"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 8,
+    "brandedTrafficPct": 34.4,
+    "socialShareOfVoice": 1.72,
+    "contentRefreshRate": 40.8,
+    "avgContentAgeMonths": 11.4
+  },
+  "21": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 16683,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 4966,
+      "substackSubscribers": 2245
+    },
+    "youtubeExtended": {
+      "monthlyViews": 258944,
+      "avgViewDurationSec": 229,
+      "uploadsPerMonth": 16,
+      "clickThroughRate": 7.0
+    },
+    "postsPerWeek": {
+      "linkedin": 12,
+      "twitter": 58,
+      "youtube": 6,
+      "instagram": 1,
+      "tiktok": 0,
+      "threads": 3
+    },
+    "executivePresence": {
+      "ceoName": "Brian Langstraat",
+      "ceoLinkedinFollowers": 26280,
+      "executiveCount": 8,
+      "monthlyExecPosts": 9,
+      "thoughtLeadershipScore": 74,
+      "mediaAppearancesMonthly": 5
+    },
+    "serpFeatures": {
+      "featuredSnippets": 23,
+      "paaOwnership": 14,
+      "knowledgePanels": 3,
+      "aiOverviewCitations": 41,
+      "videoCarouselRank": 7
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 103,
+      "chatgptCitationEstimate": 508,
+      "claudeCitationEstimate": 297,
+      "googleAIOverviewPresencePct": 51,
+      "aiVisibilityScore": 68
+    },
+    "eeat": {
+      "authorBiosCount": 12,
+      "credentialsCoverage": 75,
+      "schemaMarkupScore": 76,
+      "complianceDisclosureScore": 82,
+      "overallEEATScore": 70
+    },
+    "contentFunnel": {
+      "tofuPct": 54,
+      "mofuPct": 40,
+      "bofuPct": 6
+    },
+    "interactiveTools": {
+      "count": 17,
+      "examples": [
+        "ETF Screener",
+        "Rebalancing Tool",
+        "Portfolio Builder",
+        "Income Estimator",
+        "Asset Allocation Tool",
+        "Risk Analyzer",
+        "Retirement Calculator"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 36527,
+      "avgOpenRate": 40.9,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [],
+    "complianceStack": [
+      "OneTrust",
+      "Proofpoint Archive",
+      "Global Relay",
+      "Smarsh"
+    ],
+    "stackMaturity": "Transitional",
+    "stackAge": 7,
+    "brandedTrafficPct": 50.6,
+    "socialShareOfVoice": 1.72,
+    "contentRefreshRate": 10.1,
+    "avgContentAgeMonths": 12.0
+  },
+  "22": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 5159,
+      "substackSubscribers": 2321
+    },
+    "youtubeExtended": {
+      "monthlyViews": 237849,
+      "avgViewDurationSec": 415,
+      "uploadsPerMonth": 14,
+      "clickThroughRate": 7.4
+    },
+    "postsPerWeek": {
+      "linkedin": 19,
+      "twitter": 52,
+      "youtube": 0,
+      "instagram": 5,
+      "tiktok": 0,
+      "threads": 1
+    },
+    "executivePresence": {
+      "ceoName": "Tom Faust",
+      "ceoLinkedinFollowers": 22882,
+      "executiveCount": 14,
+      "monthlyExecPosts": 50,
+      "thoughtLeadershipScore": 79,
+      "mediaAppearancesMonthly": 8
+    },
+    "serpFeatures": {
+      "featuredSnippets": 25,
+      "paaOwnership": 16,
+      "knowledgePanels": 2,
+      "aiOverviewCitations": 32,
+      "videoCarouselRank": 7
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 114,
+      "chatgptCitationEstimate": 469,
+      "claudeCitationEstimate": 296,
+      "googleAIOverviewPresencePct": 48,
+      "aiVisibilityScore": 80
+    },
+    "eeat": {
+      "authorBiosCount": 14,
+      "credentialsCoverage": 71,
+      "schemaMarkupScore": 64,
+      "complianceDisclosureScore": 83,
+      "overallEEATScore": 81
+    },
+    "contentFunnel": {
+      "tofuPct": 44,
+      "mofuPct": 26,
+      "bofuPct": 30
+    },
+    "interactiveTools": {
+      "count": 12,
+      "examples": [
+        "Portfolio Builder",
+        "RMD Calculator",
+        "Risk Analyzer",
+        "ETF Screener"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 34008,
+      "avgOpenRate": 30.1,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [
+      "Claude for Business",
+      "ChatGPT Enterprise",
+      "Runway"
+    ],
+    "complianceStack": [
+      "Proofpoint Archive",
+      "Theta Lake",
+      "Smarsh"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 6,
+    "brandedTrafficPct": 35.9,
+    "socialShareOfVoice": 2.04,
+    "contentRefreshRate": 22.9,
+    "avgContentAgeMonths": 6.8
+  },
+  "23": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 14195,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 3.7,
+      "threadsFollowers": 4638,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 253663,
+      "avgViewDurationSec": 269,
+      "uploadsPerMonth": 16,
+      "clickThroughRate": 2.2
+    },
+    "postsPerWeek": {
+      "linkedin": 25,
+      "twitter": 44,
+      "youtube": 6,
+      "instagram": 4,
+      "tiktok": 0,
+      "threads": 10
+    },
+    "executivePresence": {
+      "ceoName": "Michelle Seitz",
+      "ceoLinkedinFollowers": 27456,
+      "executiveCount": 3,
+      "monthlyExecPosts": 12,
+      "thoughtLeadershipScore": 76,
+      "mediaAppearancesMonthly": 27
+    },
+    "serpFeatures": {
+      "featuredSnippets": 23,
+      "paaOwnership": 16,
+      "knowledgePanels": 5,
+      "aiOverviewCitations": 32,
+      "videoCarouselRank": 6
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 132,
+      "chatgptCitationEstimate": 474,
+      "claudeCitationEstimate": 264,
+      "googleAIOverviewPresencePct": 55,
+      "aiVisibilityScore": 64
+    },
+    "eeat": {
+      "authorBiosCount": 12,
+      "credentialsCoverage": 75,
+      "schemaMarkupScore": 70,
+      "complianceDisclosureScore": 75,
+      "overallEEATScore": 75
+    },
+    "contentFunnel": {
+      "tofuPct": 31,
+      "mofuPct": 29,
+      "bofuPct": 40
+    },
+    "interactiveTools": {
+      "count": 17,
+      "examples": [
+        "College Savings Planner",
+        "Market Outlook Dashboard",
+        "RMD Calculator",
+        "Portfolio Builder",
+        "Tax-Loss Harvester"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 32087,
+      "avgOpenRate": 31.5,
+      "frequency": "Bi-weekly"
+    },
+    "aiToolsAdopted": [
+      "Midjourney",
+      "Jasper"
+    ],
+    "complianceStack": [
+      "Hearsay",
+      "NICE Actimize"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 7,
+    "brandedTrafficPct": 61.5,
+    "socialShareOfVoice": 0.81,
+    "contentRefreshRate": 34.3,
+    "avgContentAgeMonths": 10.4
+  },
+  "24": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 0,
+      "tiktokVideoViewsMonthly": 0,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 7594,
+      "substackSubscribers": 4421
+    },
+    "youtubeExtended": {
+      "monthlyViews": 425417,
+      "avgViewDurationSec": 416,
+      "uploadsPerMonth": 7,
+      "clickThroughRate": 6.4
+    },
+    "postsPerWeek": {
+      "linkedin": 35,
+      "twitter": 19,
+      "youtube": 1,
+      "instagram": 3,
+      "tiktok": 12,
+      "threads": 2
+    },
+    "executivePresence": {
+      "ceoName": "Seth Bernstein",
+      "ceoLinkedinFollowers": 36840,
+      "executiveCount": 10,
+      "monthlyExecPosts": 9,
+      "thoughtLeadershipScore": 75,
+      "mediaAppearancesMonthly": 37
+    },
+    "serpFeatures": {
+      "featuredSnippets": 40,
+      "paaOwnership": 24,
+      "knowledgePanels": 4,
+      "aiOverviewCitations": 53,
+      "videoCarouselRank": 13
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 173,
+      "chatgptCitationEstimate": 727,
+      "claudeCitationEstimate": 479,
+      "googleAIOverviewPresencePct": 48,
+      "aiVisibilityScore": 79
+    },
+    "eeat": {
+      "authorBiosCount": 24,
+      "credentialsCoverage": 70,
+      "schemaMarkupScore": 67,
+      "complianceDisclosureScore": 78,
+      "overallEEATScore": 80
+    },
+    "contentFunnel": {
+      "tofuPct": 32,
+      "mofuPct": 39,
+      "bofuPct": 29
+    },
+    "interactiveTools": {
+      "count": 17,
+      "examples": [
+        "College Savings Planner",
+        "Retirement Calculator",
+        "Factor Analysis Tool",
+        "RMD Calculator",
+        "ESG Rating Tool",
+        "Monte Carlo Simulator",
+        "Tax-Loss Harvester"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 54275,
+      "avgOpenRate": 47.1,
+      "frequency": "Monthly"
+    },
+    "aiToolsAdopted": [],
+    "complianceStack": [
+      "Osano",
+      "Hearsay"
+    ],
+    "stackMaturity": "Legacy",
+    "stackAge": 3,
+    "brandedTrafficPct": 31.5,
+    "socialShareOfVoice": 3.8,
+    "contentRefreshRate": 15.7,
+    "avgContentAgeMonths": 13.4
+  },
+  "25": {
+    "emergingPlatforms": {
+      "tiktokFollowers": 26654,
+      "tiktokVideoViewsMonthly": 110275,
+      "tiktokEngagementRate": 0,
+      "threadsFollowers": 8231,
+      "substackSubscribers": 0
+    },
+    "youtubeExtended": {
+      "monthlyViews": 345455,
+      "avgViewDurationSec": 418,
+      "uploadsPerMonth": 20,
+      "clickThroughRate": 3.5
+    },
+    "postsPerWeek": {
+      "linkedin": 16,
+      "twitter": 54,
+      "youtube": 6,
+      "instagram": 9,
+      "tiktok": 10,
+      "threads": 0
+    },
+    "executivePresence": {
+      "ceoName": "Dave Butler",
+      "ceoLinkedinFollowers": 39976,
+      "executiveCount": 13,
+      "monthlyExecPosts": 42,
+      "thoughtLeadershipScore": 77,
+      "mediaAppearancesMonthly": 21
+    },
+    "serpFeatures": {
+      "featuredSnippets": 39,
+      "paaOwnership": 27,
+      "knowledgePanels": 5,
+      "aiOverviewCitations": 58,
+      "videoCarouselRank": 12
+    },
+    "aiSearchVisibility": {
+      "perplexityCitations": 211,
+      "chatgptCitationEstimate": 673,
+      "claudeCitationEstimate": 438,
+      "googleAIOverviewPresencePct": 52,
+      "aiVisibilityScore": 75
+    },
+    "eeat": {
+      "authorBiosCount": 21,
+      "credentialsCoverage": 75,
+      "schemaMarkupScore": 76,
+      "complianceDisclosureScore": 89,
+      "overallEEATScore": 84
+    },
+    "contentFunnel": {
+      "tofuPct": 40,
+      "mofuPct": 36,
+      "bofuPct": 24
+    },
+    "interactiveTools": {
+      "count": 15,
+      "examples": [
+        "College Savings Planner",
+        "ESG Rating Tool",
+        "Rebalancing Tool",
+        "Portfolio Builder"
+      ]
+    },
+    "newsletter": {
+      "subscribers": 56744,
+      "avgOpenRate": 34.1,
+      "frequency": "Bi-weekly"
+    },
+    "aiToolsAdopted": [
+      "Midjourney",
+      "Writer.com",
+      "Jasper"
+    ],
+    "complianceStack": [
+      "Proofpoint Archive",
+      "Mimecast"
+    ],
+    "stackMaturity": "Modern",
+    "stackAge": 7,
+    "brandedTrafficPct": 34.9,
+    "socialShareOfVoice": 3.6,
+    "contentRefreshRate": 13.4,
+    "avgContentAgeMonths": 5.9
+  }
+};
+
+export const aumTiers = {
+  mega: { label: 'Mega ($5T+)', min: 5000 },
+  large: { label: 'Large ($1T–$5T)', min: 1000, max: 5000 },
+  mid: { label: 'Mid ($500B–$1T)', min: 500, max: 1000 },
+  boutique: { label: 'Boutique (<$500B)', max: 500},
+};
+
+
+
 export default {
   firms,
   industryBenchmarks,
@@ -2262,5 +4837,8 @@ export default {
   trends2026,
   bestPractices,
   contentTypes,
-  seoKeywordThemes
+  seoKeywordThemes,
+  historicalScores,
+  extendedFirmData,
+  aumTiers
 };

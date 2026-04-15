@@ -11,7 +11,7 @@ import {
   AlertCircle, CheckCircle, Lock, Wifi, Globe, Code, MessageSquare,
   Calendar, Percent, Activity, Filter
 } from 'lucide-react';
-import { firms, industryBenchmarks, martechCategories, trends2026, bestPractices, contentTypes, seoKeywordThemes } from './data';
+import { firms, industryBenchmarks, martechCategories, trends2026, bestPractices, contentTypes, seoKeywordThemes, historicalScores, extendedFirmData, aumTiers } from './data';
 
 // ============================================================================
 // UTILITY FUNCTIONS
@@ -252,7 +252,7 @@ export default function App() {
       if (scoreRangeFilter === 'high') scoreMatch = firm.overallScore >= 80 && firm.overallScore < 90;
       if (scoreRangeFilter === 'mid') scoreMatch = firm.overallScore >= 70 && firm.overallScore < 80;
       if (scoreRangeFilter === 'lower') scoreMatch = firm.overallScore < 70;
-      return nameMatch || tickerMatch && categoryMatch && aumMatch && scoreMatch;
+      return (nameMatch || tickerMatch) && categoryMatch && aumMatch && scoreMatch;
     });
 
     return filtered.sort((a, b) => {
@@ -444,6 +444,128 @@ export default function App() {
   }, []);
 
   // ============================================================================
+  // V2: derived from extendedFirmData / historicalScores
+  // ============================================================================
+
+  const MONTH_LABELS = ['May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr'];
+
+  const topFiveTrendSeries = useMemo(() => {
+    const ids = topFirms.map(f => f.id);
+    return MONTH_LABELS.map((m, i) => {
+      const row = { month: m };
+      ids.forEach(id => {
+        const firm = firms.find(f => f.id === id);
+        row[firm.name.split(' ')[0]] = historicalScores?.[id]?.[i] ?? firm.overallScore;
+      });
+      return row;
+    });
+  }, [topFirms]);
+
+  const aiSearchLeaders = useMemo(() => {
+    return firms
+      .map(f => ({
+        id: f.id,
+        name: f.name,
+        score: extendedFirmData?.[f.id]?.aiSearchVisibility?.aiVisibilityScore ?? 0,
+        perplexity: extendedFirmData?.[f.id]?.aiSearchVisibility?.perplexityCitations ?? 0,
+        chatgpt: extendedFirmData?.[f.id]?.aiSearchVisibility?.chatgptCitations ?? 0,
+        claude: extendedFirmData?.[f.id]?.aiSearchVisibility?.claudeCitations ?? 0,
+        aiOverview: extendedFirmData?.[f.id]?.aiSearchVisibility?.aiOverviewAppearances ?? 0,
+      }))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 10);
+  }, []);
+
+  const serpFeatureData = useMemo(() => {
+    return [...firms]
+      .sort((a, b) => (extendedFirmData?.[b.id]?.serpFeatures?.featuredSnippets ?? 0) - (extendedFirmData?.[a.id]?.serpFeatures?.featuredSnippets ?? 0))
+      .slice(0, 10)
+      .map(f => ({
+        name: f.name.split(' ')[0],
+        Snippets: extendedFirmData?.[f.id]?.serpFeatures?.featuredSnippets ?? 0,
+        PAA: extendedFirmData?.[f.id]?.serpFeatures?.peopleAlsoAsk ?? 0,
+        Knowledge: extendedFirmData?.[f.id]?.serpFeatures?.knowledgePanels ?? 0,
+      }));
+  }, []);
+
+  const eeatScorecard = useMemo(() => {
+    return firms.map(f => ({
+      name: f.name,
+      id: f.id,
+      experience: extendedFirmData?.[f.id]?.eeat?.experience ?? 0,
+      expertise: extendedFirmData?.[f.id]?.eeat?.expertise ?? 0,
+      authoritativeness: extendedFirmData?.[f.id]?.eeat?.authoritativeness ?? 0,
+      trust: extendedFirmData?.[f.id]?.eeat?.trust ?? 0,
+      total: extendedFirmData?.[f.id]?.eeat?.total ?? 0,
+    })).sort((a,b) => b.total - a.total).slice(0, 10);
+  }, []);
+
+  const stackMaturityDist = useMemo(() => {
+    const buckets = { 'Legacy': 0, 'Transitional': 0, 'Modern': 0, 'Composable-AI': 0 };
+    firms.forEach(f => {
+      const m = extendedFirmData?.[f.id]?.stackMaturity;
+      if (m && buckets[m] !== undefined) buckets[m] += 1;
+    });
+    return Object.entries(buckets).map(([name, value]) => ({ name, value }));
+  }, []);
+
+  const aiToolAdoption = useMemo(() => {
+    const counts = {};
+    firms.forEach(f => {
+      (extendedFirmData?.[f.id]?.aiToolsAdopted ?? []).forEach(t => {
+        counts[t] = (counts[t] || 0) + 1;
+      });
+    });
+    return Object.entries(counts).map(([tool, count]) => ({ tool, count })).sort((a,b) => b.count - a.count).slice(0, 10);
+  }, []);
+
+  const executivePresenceLeaders = useMemo(() => {
+    return firms
+      .map(f => ({
+        id: f.id,
+        name: f.name,
+        exec: extendedFirmData?.[f.id]?.executivePresence?.ceoName ?? '—',
+        followers: extendedFirmData?.[f.id]?.executivePresence?.ceoLinkedInFollowers ?? 0,
+        thoughtScore: extendedFirmData?.[f.id]?.executivePresence?.thoughtLeadershipScore ?? 0,
+      }))
+      .sort((a, b) => b.thoughtScore - a.thoughtScore)
+      .slice(0, 8);
+  }, []);
+
+  const platformCadence = useMemo(() => {
+    return [...firms].slice(0, 12).map(f => ({
+      name: f.name.split(' ')[0],
+      LinkedIn: extendedFirmData?.[f.id]?.postsPerWeek?.linkedin ?? 0,
+      Twitter: extendedFirmData?.[f.id]?.postsPerWeek?.twitter ?? 0,
+      YouTube: extendedFirmData?.[f.id]?.postsPerWeek?.youtube ?? 0,
+      Instagram: extendedFirmData?.[f.id]?.postsPerWeek?.instagram ?? 0,
+      TikTok: extendedFirmData?.[f.id]?.postsPerWeek?.tiktok ?? 0,
+    }));
+  }, []);
+
+  const contentFunnelData = useMemo(() => {
+    return [...firms].slice(0, 12).map(f => ({
+      name: f.name.split(' ')[0],
+      TOFU: extendedFirmData?.[f.id]?.contentFunnel?.tofu ?? 0,
+      MOFU: extendedFirmData?.[f.id]?.contentFunnel?.mofu ?? 0,
+      BOFU: extendedFirmData?.[f.id]?.contentFunnel?.bofu ?? 0,
+    }));
+  }, []);
+
+  // Peer-group filter for benchmarking
+  const [peerTier, setPeerTier] = useState('all');
+  const peerFirms = useMemo(() => {
+    if (peerTier === 'all') return firms;
+    const tier = aumTiers?.[peerTier];
+    if (!tier) return firms;
+    return firms.filter(f => {
+      const min = tier.min ?? 0;
+      const max = tier.max ?? Infinity;
+      return f.aum >= min && f.aum < max;
+    });
+  }, [peerTier]);
+
+  // ============================================================================
   // RENDER SECTIONS
   // ============================================================================
 
@@ -478,6 +600,36 @@ export default function App() {
           change="+2.1%"
           changeDirection="up"
         />
+      </div>
+
+      {/* Trend: 12-Month Score Trajectory for Top 5 */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-lg font-bold text-slate-100">12-Month Overall Score Trajectory — Top 5 Firms</h3>
+            <p className="text-xs text-slate-400 mt-1">Trailing 12 months, composite overall score (0–100)</p>
+          </div>
+          <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded">Updated Apr 2026</span>
+        </div>
+        <ResponsiveContainer width="100%" height={280}>
+          <LineChart data={topFiveTrendSeries}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+            <XAxis dataKey="month" stroke="#64748b" />
+            <YAxis stroke="#64748b" domain={[60, 100]} />
+            <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} />
+            <Legend />
+            {topFirms.map((f, i) => (
+              <Line
+                key={f.id}
+                type="monotone"
+                dataKey={f.name.split(' ')[0]}
+                stroke={['#06b6d4', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'][i]}
+                strokeWidth={2}
+                dot={{ r: 3 }}
+              />
+            ))}
+          </LineChart>
+        </ResponsiveContainer>
       </div>
 
       {/* Market Leaders & Distribution */}
@@ -853,6 +1005,59 @@ export default function App() {
 
   const renderBenchmarking = () => (
     <div className="space-y-6">
+      {/* Peer-Group (AUM Tier) */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div>
+            <h3 className="text-lg font-bold text-slate-100">Peer-Group Benchmark (by AUM Tier)</h3>
+            <p className="text-xs text-slate-400 mt-1">Compare any firm against the cohort of truly comparable firms — not a distorted 25-firm average</p>
+          </div>
+          <div className="flex gap-2">
+            {[
+              { k: 'all', label: 'All Firms' },
+              { k: 'mega', label: 'Mega ($5T+)' },
+              { k: 'large', label: 'Large ($1T–$5T)' },
+              { k: 'mid', label: 'Mid ($500B–$1T)' },
+              { k: 'boutique', label: 'Boutique (<$500B)' },
+            ].map(opt => (
+              <button
+                key={opt.k}
+                onClick={() => setPeerTier(opt.k)}
+                className={`px-3 py-1.5 text-xs font-medium rounded-lg transition ${
+                  peerTier === opt.k ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          {[
+            { label: 'Firms in peer group', v: peerFirms.length, color: 'text-slate-100' },
+            { label: 'Avg Overall Score', v: peerFirms.length ? Math.round(peerFirms.reduce((s,f) => s+f.overallScore, 0)/peerFirms.length) : 0, color: 'text-cyan-400' },
+            { label: 'Avg Domain Authority', v: peerFirms.length ? Math.round(peerFirms.reduce((s,f) => s+f.domainAuthority, 0)/peerFirms.length) : 0, color: 'text-emerald-400' },
+            { label: 'Avg Content Score', v: peerFirms.length ? Math.round(peerFirms.reduce((s,f) => s+f.contentScore, 0)/peerFirms.length) : 0, color: 'text-amber-400' },
+            { label: 'Avg Social Score', v: peerFirms.length ? Math.round(peerFirms.reduce((s,f) => s+f.socialScore, 0)/peerFirms.length) : 0, color: 'text-violet-400' },
+          ].map((m, i) => (
+            <div key={i} className="bg-slate-800/40 rounded-lg p-3 border border-slate-800">
+              <p className="text-xs text-slate-400 mb-1">{m.label}</p>
+              <p className={`text-2xl font-bold ${m.color}`}>{m.v}</p>
+            </div>
+          ))}
+        </div>
+        {peerFirms.length > 0 && peerFirms.length < firms.length && (
+          <div className="mt-4 pt-4 border-t border-slate-800">
+            <p className="text-xs text-slate-400 mb-2">Firms in this peer group:</p>
+            <div className="flex flex-wrap gap-1">
+              {peerFirms.map(f => (
+                <span key={f.id} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">{f.name}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
         <h3 className="text-lg font-bold text-slate-100 mb-4">Competitive Comparison</h3>
         <p className="text-sm text-slate-400 mb-4">Select 2-4 firms to compare</p>
@@ -1065,6 +1270,109 @@ export default function App() {
         </div>
       </div>
 
+      {/* AI Search Visibility Leaderboard */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-lg font-bold text-slate-100">AI Search Visibility Leaderboard</h3>
+            <p className="text-xs text-slate-400 mt-1">Citations across Perplexity, ChatGPT, Claude + Google AI Overview appearances (last 30d)</p>
+          </div>
+          <span className="text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-1 rounded">NEW</span>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-xs text-slate-400 border-b border-slate-800">
+                <th className="pb-2 pr-3">Firm</th>
+                <th className="pb-2 px-3 text-right">AI Visibility</th>
+                <th className="pb-2 px-3 text-right">Perplexity</th>
+                <th className="pb-2 px-3 text-right">ChatGPT</th>
+                <th className="pb-2 px-3 text-right">Claude</th>
+                <th className="pb-2 px-3 text-right">AI Overview</th>
+              </tr>
+            </thead>
+            <tbody>
+              {aiSearchLeaders.map((row, i) => (
+                <tr key={row.id} className="border-b border-slate-800/50">
+                  <td className="py-2 pr-3">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-slate-500 w-5">#{i+1}</span>
+                      <span className="text-slate-100 font-medium">{row.name}</span>
+                    </div>
+                  </td>
+                  <td className="py-2 px-3 text-right">
+                    <span className="text-cyan-400 font-bold">{row.score}</span>
+                  </td>
+                  <td className="py-2 px-3 text-right text-slate-300">{row.perplexity.toLocaleString()}</td>
+                  <td className="py-2 px-3 text-right text-slate-300">{row.chatgpt.toLocaleString()}</td>
+                  <td className="py-2 px-3 text-right text-slate-300">{row.claude.toLocaleString()}</td>
+                  <td className="py-2 px-3 text-right text-slate-300">{row.aiOverview.toLocaleString()}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* SERP Feature Ownership */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-slate-100 mb-1">SERP Feature Ownership (Top 10)</h3>
+        <p className="text-xs text-slate-400 mb-4">Featured snippets, PAA placements, and knowledge panels — zero-click real estate</p>
+        <ResponsiveContainer width="100%" height={320}>
+          <BarChart data={serpFeatureData}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+            <XAxis dataKey="name" stroke="#64748b" angle={-30} textAnchor="end" height={70} />
+            <YAxis stroke="#64748b" />
+            <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} />
+            <Legend />
+            <Bar dataKey="Snippets" stackId="a" fill="#06b6d4" />
+            <Bar dataKey="PAA" stackId="a" fill="#10b981" />
+            <Bar dataKey="Knowledge" stackId="a" fill="#f59e0b" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* E-E-A-T Authority Scorecard */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-slate-100 mb-1">E-E-A-T Authority Scorecard (Top 10)</h3>
+        <p className="text-xs text-slate-400 mb-4">Google's Experience · Expertise · Authoritativeness · Trust quality signals (0–100)</p>
+        <div className="space-y-2">
+          {eeatScorecard.map((row, i) => (
+            <div key={row.id} className="grid grid-cols-12 gap-2 items-center text-xs py-2 border-b border-slate-800/50 last:border-0">
+              <div className="col-span-3 flex items-center gap-2">
+                <span className="text-slate-500 w-5">#{i+1}</span>
+                <span className="text-slate-100 font-medium truncate">{row.name}</span>
+              </div>
+              <div className="col-span-2"><span className="text-slate-400">Exp </span><span className="text-cyan-400 font-bold">{row.experience}</span></div>
+              <div className="col-span-2"><span className="text-slate-400">Expt </span><span className="text-emerald-400 font-bold">{row.expertise}</span></div>
+              <div className="col-span-2"><span className="text-slate-400">Auth </span><span className="text-amber-400 font-bold">{row.authoritativeness}</span></div>
+              <div className="col-span-2"><span className="text-slate-400">Trust </span><span className="text-violet-400 font-bold">{row.trust}</span></div>
+              <div className="col-span-1 text-right">
+                <span className="text-slate-100 font-bold">{row.total}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Content Funnel Mix */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-slate-100 mb-1">Content Funnel Mix (TOFU/MOFU/BOFU %)</h3>
+        <p className="text-xs text-slate-400 mb-4">How each firm balances awareness vs. consideration vs. decision-stage content</p>
+        <ResponsiveContainer width="100%" height={320}>
+          <BarChart data={contentFunnelData}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+            <XAxis dataKey="name" stroke="#64748b" angle={-30} textAnchor="end" height={70} />
+            <YAxis stroke="#64748b" unit="%" />
+            <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} />
+            <Legend />
+            <Bar dataKey="TOFU" stackId="a" fill="#06b6d4" />
+            <Bar dataKey="MOFU" stackId="a" fill="#10b981" />
+            <Bar dataKey="BOFU" stackId="a" fill="#f59e0b" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
       {/* Keyword Themes */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
         <h3 className="text-lg font-bold text-slate-100 mb-4">Top SEO Keyword Themes</h3>
@@ -1184,6 +1492,56 @@ export default function App() {
             ))}
         </div>
       </div>
+
+      {/* Platform Cadence */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-slate-100 mb-1">Platform Posting Cadence (posts/week)</h3>
+        <p className="text-xs text-slate-400 mb-4">Native publishing velocity across owned channels — sustained cadence beats burst posting</p>
+        <ResponsiveContainer width="100%" height={320}>
+          <BarChart data={platformCadence}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+            <XAxis dataKey="name" stroke="#64748b" angle={-30} textAnchor="end" height={70} />
+            <YAxis stroke="#64748b" />
+            <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} />
+            <Legend />
+            <Bar dataKey="LinkedIn" fill="#0077b5" />
+            <Bar dataKey="Twitter" fill="#1DA1F2" />
+            <Bar dataKey="YouTube" fill="#ef4444" />
+            <Bar dataKey="Instagram" fill="#E1306C" />
+            <Bar dataKey="TikTok" fill="#8b5cf6" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* Executive Presence */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-lg font-bold text-slate-100">Executive Presence Leaderboard</h3>
+            <p className="text-xs text-slate-400 mt-1">CEO thought-leadership score, LinkedIn reach, and exec engagement</p>
+          </div>
+          <span className="text-xs text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2 py-1 rounded">People-led content</span>
+        </div>
+        <div className="space-y-2">
+          {executivePresenceLeaders.map((row, i) => (
+            <div key={row.id} className="flex items-center gap-3 py-2 border-b border-slate-800/50 last:border-0">
+              <span className="text-slate-500 font-bold w-6 text-sm">#{i+1}</span>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-slate-100 truncate">{row.name}</p>
+                <p className="text-xs text-slate-400 truncate">CEO: {row.exec}</p>
+              </div>
+              <div className="text-right">
+                <p className="text-sm font-bold text-cyan-400">{(row.followers / 1000).toFixed(0)}K</p>
+                <p className="text-xs text-slate-400">LinkedIn followers</p>
+              </div>
+              <div className="text-right w-20">
+                <p className="text-sm font-bold text-emerald-400">{row.thoughtScore}</p>
+                <p className="text-xs text-slate-400">TL score</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 
@@ -1236,6 +1594,64 @@ export default function App() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Stack Maturity Distribution */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+          <h3 className="text-lg font-bold text-slate-100 mb-1">Stack Maturity Distribution</h3>
+          <p className="text-xs text-slate-400 mb-4">Where each firm sits on the legacy → composable-AI spectrum</p>
+          <ResponsiveContainer width="100%" height={260}>
+            <PieChart>
+              <Pie
+                data={stackMaturityDist}
+                cx="50%"
+                cy="50%"
+                labelLine={false}
+                label={(e) => `${e.name} (${e.value})`}
+                outerRadius={85}
+                dataKey="value"
+              >
+                {stackMaturityDist.map((_, i) => (
+                  <Cell key={i} fill={['#64748b', '#f59e0b', '#10b981', '#06b6d4'][i]} />
+                ))}
+              </Pie>
+              <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+
+        <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+          <h3 className="text-lg font-bold text-slate-100 mb-1">AI Tool Adoption Rate</h3>
+          <p className="text-xs text-slate-400 mb-4">Count of firms deploying each AI platform in production workflows</p>
+          <ResponsiveContainer width="100%" height={260}>
+            <BarChart data={aiToolAdoption} layout="vertical" margin={{ left: 110 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+              <XAxis type="number" stroke="#64748b" />
+              <YAxis dataKey="tool" type="category" stroke="#64748b" width={100} />
+              <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} />
+              <Bar dataKey="count" fill="#10b981" radius={[0, 8, 8, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+
+      {/* Compliance Stack Coverage */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-slate-100 mb-1">Compliance & Regulatory Stack</h3>
+        <p className="text-xs text-slate-400 mb-4">Critical for asset managers: archival, surveillance, and consent infrastructure by firm</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {firms.slice(0, 12).map(f => (
+            <div key={f.id} className="bg-slate-800/40 rounded-lg p-3 border border-slate-800">
+              <p className="text-sm font-semibold text-slate-100 mb-2">{f.name}</p>
+              <div className="flex flex-wrap gap-1">
+                {(extendedFirmData?.[f.id]?.complianceStack ?? []).map((c, i) => (
+                  <span key={i} className="text-xs bg-slate-900 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded">{c}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Stack Complexity */}
