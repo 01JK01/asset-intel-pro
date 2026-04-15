@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   BarChart, Bar, LineChart, Line, PieChart, Pie, RadarChart, Radar,
   ScatterChart, Scatter, AreaChart, Area, Cell, XAxis, YAxis,
@@ -165,9 +165,44 @@ const QuadrantChart = ({ data }) => {
 // MAIN APP COMPONENT
 // ============================================================================
 
+const VALID_SECTIONS = ['dashboard', 'profiles', 'benchmarking', 'seo', 'social', 'martech', 'scoring', 'calculators', 'trends', 'reports'];
+
+const getSectionFromHash = () => {
+  const hash = (typeof window !== 'undefined' ? window.location.hash : '').replace(/^#\/?/, '');
+  return VALID_SECTIONS.includes(hash) ? hash : 'dashboard';
+};
+
 export default function App() {
-  const [activeSection, setActiveSection] = useState('dashboard');
+  const [activeSection, setActiveSectionState] = useState(getSectionFromHash);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  // Sync activeSection with URL hash for real back/forward navigation
+  const setActiveSection = (section) => {
+    if (window.location.hash !== `#/${section}`) {
+      window.history.pushState({ section }, '', `#/${section}`);
+    }
+    setActiveSectionState(section);
+  };
+
+  useEffect(() => {
+    // Normalize initial URL
+    const initial = getSectionFromHash();
+    if (!window.location.hash || window.location.hash !== `#/${initial}`) {
+      window.history.replaceState({ section: initial }, '', `#/${initial}`);
+    }
+    const onPop = () => setActiveSectionState(getSectionFromHash());
+    window.addEventListener('popstate', onPop);
+    window.addEventListener('hashchange', onPop);
+    return () => {
+      window.removeEventListener('popstate', onPop);
+      window.removeEventListener('hashchange', onPop);
+    };
+  }, []);
+
+  // Scroll to top on section change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeSection]);
   const [globalSearch, setGlobalSearch] = useState('');
   const [selectedCompanies, setSelectedCompanies] = useState([]);
   const [selectedCompany, setSelectedCompany] = useState(null);
@@ -1181,14 +1216,23 @@ export default function App() {
           <div key={category.id} className="bg-slate-900 border border-slate-800 rounded-xl p-6">
             <h4 className="text-sm font-bold text-slate-100 mb-3">{category.name}</h4>
             <div className="space-y-2">
-              {category.tools.slice(0, 5).map((tool, idx) => (
-                <div key={idx} className="flex items-center justify-between text-sm">
-                  <span className="text-slate-400">{tool}</span>
-                  <span className="bg-slate-800 text-cyan-400 px-2 py-1 rounded text-xs font-semibold">
-                    {Math.round(Math.random() * 15 + 5)} firms
-                  </span>
-                </div>
-              ))}
+              {category.tools.slice(0, 5).map((tool, idx) => {
+                const toolName = typeof tool === 'string' ? tool : tool.name;
+                const toolMeta = typeof tool === 'object' ? tool : null;
+                return (
+                  <div key={idx} className="flex items-center justify-between text-sm">
+                    <div className="flex-1 min-w-0">
+                      <span className="text-slate-300 font-medium">{toolName}</span>
+                      {toolMeta?.segment && (
+                        <span className="ml-2 text-xs text-slate-500">{toolMeta.segment}</span>
+                      )}
+                    </div>
+                    <span className="bg-slate-800 text-cyan-400 px-2 py-1 rounded text-xs font-semibold whitespace-nowrap">
+                      {toolMeta?.popularity ? `${toolMeta.popularity}% adoption` : `${Math.round(Math.random() * 15 + 5)} firms`}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}
